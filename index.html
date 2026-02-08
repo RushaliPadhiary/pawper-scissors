@@ -4,8 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone Pawper Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!--Landing Page-->
+    <div id="landing">
+        <div id="landing-bg"></div>
+    </div>
+
+    <!--Intro dialog-->
+    <div id="dialog" class="dialog-box">
+        <div class="dialog-content">
+            <p id="dialog-text" class="dialog-text">
+                Ahem! So I know you a kewl gamer but can you BEAT me in this game?
+            </p>
+            <button id="btn-bring-it-on" class="pixel-btn">
+                <img src="assets/images/Date_game.png" alt="Game button">
+                <span class="btn-label">Bring it on!</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!--Game Overlay-->
+    <div id="game-overlay" class="hidden">
+        <!--HUD-->
+        <div id="hud" class="hud hidden">
+            <div id="hud-stats" class="hud-left">Wins:0 | Draws: 0 | Losses: 0</div>
+            <div id="hud-timer" class="hud-center">Timer: 00:10</div>
+            <div id="hud-round" class="hud-right">Round: 1</div>
+        </div>
+
+        <!--Round intro text-->
+        <div id="round-intro" class="round-intro hidden">ROUND 1</div>
+
+        <!--Arena-->
+        <div id="arena">
+            <div class="paw-container">
+                <img id="paw-you" class="paw bounce" src="assets/images/cat1_stone.png" alt="Your paw">
+                <p class="paw-label">YOU</p>
+            </div>
+
+            <!--Result Animation gif-->
+            <div id="result-display" class="result-display hidden">
+                <img id="result-gif" src="" alt="Result Animation">
+            </div>
+
+            <div class="paw-container">
+                <img id="paw-me" class="paw bounce" src="assets/images/cat2_stone.png" alt="My paw">
+                <p class="paw-label">ME</p>
+            </div>
+        </div>
+
+        <!--Choice buttons: Stone, Scissor, Paper-->
+        <div id="choices" class="choices hidden">
+            <button class="choice-btn" data-choices="stone">
+                <img id="choice-stone" src="assets/images/Date_stone.png" alt="choice stone">
+            </button>
+            <button class="choice-btn" data-choices="paper">
+                <img id="choice-paper" src="assets/images/Date_paper.png" alt="choice paper">
+            </button>
+            <button class="choice-btn" data-choices="scissor">
+                <img id="choice-scissor" src="assets/images/Date_scissor.png" alt="choice scissor">
+            </button>
+        </div>
+    </div>
+
+    <!--Win Dialog-->
+    <div id="win-dialog" class="dialog-box hidden">
+        <div class="dialog-content win-content">
+            <div class="win-header">
+                <img id="win-gif" class="win-gif" src="assets/animations/pwease_uwu.gif" alt="Cute Blinking Cat">
+                <p class="win-text">
+                    Well...<br>
+                    I was lowkey rooting for you to win! You've won a movie date with me
+                </p>
+            </div>
+            <button id="btn-claim" class="pixel-btn">
+                <img src="assets/images/Date_win.png" alt="Claim button">
+                <span class="btn-label">Claim!</span>
+            </button>
+        </div>
+    </div>
+
+    <!--Movie Picker Dialog-->
+    <div id="movie-dialog" class="dialog-box hidden">
+        <div class="dialog-content movie-content">
+            <p class="movie-warning">
+                You better make a good pick else I'm snitching on you to your mom!!!
+            </p>
+            <p id="remaining-picks" class="remaining-picks">Remaining picks: 10/10</p>
+            <div class="movie-controls">
+                <button id="btn-movie" class="pixel-btn movie-btn">
+                    <img src="assets/images/Date_movie.png" alt="Movie button">
+                    <span id="movie-label" class="btn-label">When Marnie was there</span>
+                </button>
+                <button id="btn-refresh" class="refresh-btn">
+                    <img src="assets/images/Date_refresh.png" alt="Refresh">
+                </button>
+            </div>
+        </div>
+    </div>
     
+    <script src="script.js"></script>
 </body>
 </html>

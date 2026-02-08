@@ -1,0 +1,373 @@
+/* ---Reset & Base--- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    image-rendering: pixelated;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ---Landing--- */
+#landing {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#landing-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/images/Date_bg.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ---Dialog Box--- */
+.dialog-box {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: popIn 0.4s ease-out;
+}
+
+.dialog-box .dialog-content {
+    position: relative;
+    width: 480px;
+    min-height: 360px;
+    background: url('assets/images/Date_dialogbox.png') center/100% 100% no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 40px 40px;
+    gap: 20px;
+}
+
+.dialog-text {
+    color: #3d3d5c;
+    font-size: 11px;
+    line-height: 2;
+    text-align: center;
+    max-width: 340px;
+}
+
+/* Poof out animation */
+.dialog-box.poof {
+    animation: poofOut 0.45s ease-in forwards;
+}
+
+/* ---Pixel Button--- */
+.pixel-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s;
+}
+
+.pixel-btn:hover {
+    transform: scale(1.05);
+}
+
+.pixel-btn:active {
+    transform: scale(0.97);
+}
+
+.pixel-btn img {
+    width: 240px;
+    height: auto;
+    display: block;
+}
+
+.pixel-btn .btn-label {
+    position: absolute;
+    right: 22px;
+    color: #3d3d5c;
+    font-size: 11px;
+    font-family: 'Press Start 2P', cursive;
+    pointer-events: none;
+}
+
+/* ---Game Overlay--- */
+#game-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    background-image: url('assets/images/Date_bg.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#game-overlay::after {
+    content: '';
+    position: absolute;
+    width: 1240px;
+    max-width: calc(100vw - 40px);
+    height: 826px;
+    max-height: calc(100vh - 40px);
+    background: #F78DA7;
+    border-radius: 18px;
+    z-index: 0;
+}
+
+/* HUD */
+.hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 1240px;
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+    padding: 30px 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+    transition: opacity 0.6s ease;
+}
+
+.hud.fade-out {
+    opacity: 0;
+}
+
+.hud-left, .hud-center, .hud-right {
+    color: #006400;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.hud-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Round intro */
+.round-intro {
+    position: absolute;
+    z-index: 3;
+    color: #006400;
+    font-size: 40px;
+    text-align: center;
+    animation: fadeInScale 0.5s ease-out;
+}
+
+/* Arena */
+#arena {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+}
+
+.paw-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.paw {
+    width: 180px;
+    height: auto;
+}
+
+.paw-label {
+    color: #006400;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Bounce animation */
+.bounce {
+    animation: softBounce 0.8s ease-in-out infinite alternate;
+}
+
+/* Result display */
+.result-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.result-display img {
+    width: 220px;
+    height: auto;
+}
+
+/* Choice buttons */
+.choices {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 50px;
+    z-index: 3;
+}
+
+.choice-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+}
+
+.choice-btn:active {
+    transform: scale(0.95);
+}
+
+.choice-btn img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+.choice-btn.disabled {
+    pointer-events: none;
+}
+
+/* ---Win Dialog--- */
+.win-content {
+    padding: 60px 30px 30px;
+    gap: 16px;
+}
+
+.win-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 380px;
+}
+
+.win-gif {
+    width: 90px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.win-text {
+    color: #3d3d5c;
+    font-size: 10px;
+    line-height: 2.1;
+}
+
+/* ---Movie picker--- */
+.movie-content {
+    padding: 65px 30px 30px;
+    gap: 14px;
+}
+
+.movie-warning {
+    color: #3d3d5c;
+    font-size: 10px;
+    line-height: 2;
+    text-align: center;
+    max-width: 360px;
+}
+
+.remaining-picks {
+    color: #3d3d5c;
+    font-size: 9px;
+    font-style: italic;
+    text-align: center;
+}
+
+.movie-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.movie-btn img {
+    width: 240px;
+}
+
+.movie-btn .btn-label {
+    font-size: 9px;
+    right: 18px;
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.refresh-btn:hover {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.refresh-btn:active {
+    transform: rotate(90deg) scale(0.95);
+}
+
+.refresh-btn img {
+    width: 60px;
+    height: auto;
+}
+
+/* ---KeyFrames--- */
+@keyframes softBounce {
+    0%   { transform: translateY(-8px); }
+    100% { transform: translateY(8px); }
+}
+
+@keyframes popIn {
+    0%   { opacity: 0; transform: scale(0.6); }
+    80%  { transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes poofOut {
+    0%   { opacity: 1; transform: scale(1); }
+    50%  { opacity: 0.5; transform: scale(1.15); }
+    100% { opacity: 0; transform: scale(0); }
+}
+
+@keyframes fadeInScale {
+    0%   { opacity: 0; transform: scale(0.7); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Overlay fade-out */
+#game-overlay.fade-out::after {
+    transition: opacity 0.8s ease;
+    opacity: 0;
+}
