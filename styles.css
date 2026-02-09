@@ -144,10 +144,10 @@ html, body {
     top: 0;
     left: 0;
     right: 0;
-    width: 1240px;
-    max-width: calc(100vw - 40px);
+    width: 1000px;
+    max-width: calc(100vw - 50px);
     margin: 0 auto;
-    padding: 30px 40px 0;
+    padding: 90px 50px 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -160,14 +160,14 @@ html, body {
 }
 
 .hud-left, .hud-center, .hud-right {
-    color: #006400;
-    font-size: 12px;
+    color: white;
+    font-size: 30px;
     white-space: nowrap;
 }
 
 .hud-center {
     position: absolute;
-    left: 50%;
+    left: 63%;
     transform: translateX(-50%);
 }
 
@@ -176,7 +176,7 @@ html, body {
     position: absolute;
     z-index: 3;
     color: #006400;
-    font-size: 40px;
+    font-size: 100px;
     text-align: center;
     animation: fadeInScale 0.5s ease-out;
 }
@@ -196,18 +196,24 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    position: relative;
+    margin-top: -120px;
 }
 
 .paw {
-    width: 180px;
-    height: auto;
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
 }
 
 .paw-label {
-    color: #006400;
-    font-size: 16px;
+    color: white;
+    font-size: 55px;
     text-align: center;
+    position: absolute; 
+    top: 100%; 
+    margin-top: -55px; 
+    width: 100%; 
 }
 
 /* Bounce animation */
@@ -217,10 +223,15 @@ html, body {
 
 /* Result display */
 .result-display {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 4;
+    pointer-events: none;
 }
 
 .result-display img {
@@ -255,8 +266,9 @@ html, body {
 }
 
 .choice-btn img {
-    width: 140px;
-    height: auto;
+    width: 200px; 
+    height: 200px; 
+    object-fit: contain; 
     display: block;
 }
 
