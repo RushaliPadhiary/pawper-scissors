@@ -10,7 +10,7 @@
     const LOSES_TO = { stone: 'paper', paper: 'scissor', scissor: 'stone' };
 
     const MOVIES = [
-        'When Marnie was There',
+        'Ponyo',
         'Little Forest',
         '50 first dates',
         'The vow',
@@ -116,9 +116,11 @@
             moviePicks--;
             updateMovieUI();
 
-            if (movieIndex === MOVIES.length - 1) {
-                // keep it visible so user can click the movie button
-            }
+        } else if (movieIndex === MOVIES.length - 1) {
+            // When at last movie, reset to first movie
+            movieIndex = 0;
+            moviePicks = MOVIES.length; // Reset picks counter
+            updateMovieUI();
         }
     }
 
@@ -328,9 +330,23 @@
     }
 
     function updateMovieUI() {
-        $movieLabel.textContent = MOVIES[movieIndex];
-        $remaining.textContent  = `Remaining picks: ${moviePicks}/${MOVIES.length}`;
+    $movieLabel.textContent = MOVIES[movieIndex];
+    $remaining.textContent = `Remaining picks: ${moviePicks}/${MOVIES.length}`;
+    
+    const btnLabel = $btnMovie.querySelector('.btn-label');
+    const currentMovie = MOVIES[movieIndex];
+    
+    btnLabel.textContent = currentMovie;
+    
+    // Remove existing classes
+    btnLabel.classList.remove('long', 'short');
+    
+    if (currentMovie.length > 18) {
+        btnLabel.classList.add('long');
+    } else if (currentMovie.length <= 15) {
+        btnLabel.classList.add('short');
     }
+}
 
     /* ---Helpers--- */
     function setPaw(side, move) {
