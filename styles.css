@@ -51,8 +51,8 @@ html, body {
 
 .dialog-box .dialog-content {
     position: relative;
-    width: 600px;
-    min-height: 600px;
+    width: 580px;
+    min-height: 580px;
     background: url('assets/images/Date_dialogbox.png') center/100% 100% no-repeat;
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@ html, body {
     line-height: 2;
     text-align: center;
     max-width: 340px;
-    margin-bottom: -90px;
+    margin-bottom: -100px;
 }
 
 /* Poof out animation */
@@ -85,7 +85,7 @@ html, body {
     align-items: center;
     justify-content: center;
     transition: transform 0.1s;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .pixel-btn:hover {
@@ -128,9 +128,9 @@ html, body {
 #game-overlay::after {
     content: '';
     position: absolute;
-    width: 1240px;
+    width: 1000px;
     max-width: calc(100vw - 40px);
-    height: 826px;
+    height: 700px;
     max-height: calc(100vh - 40px);
     background: #F78DA7;
     opacity: 0.45;
