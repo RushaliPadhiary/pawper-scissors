@@ -1,14 +1,17 @@
 {
   "name": "pawper-scissors",
   "version": "1.0.0",
+  "description": "A cute cat RPS game with movie date prize!",
+  "author": "Rushali",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "build:all": "electron-builder --win --mac --linux"
   },
   "devDependencies": {
-    "electron": "^40.2.1",
-    "electron-builder": "^26.7.0"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
   },
   "build": {
     "appId": "com.rushali.pawper-scissors",
@@ -16,18 +19,18 @@
     "directories": {
       "output": "dist"
     },
-    "files": [
-      "**/*",
-      "!node_modules/**/*"
-    ],
     "mac": {
-      "category": "public.app-category.games"
+      "category": "public.app-category.games",
+      "icon": "assets/images/cat1_stone.png"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "assets/images/cat1_stone.png"
     },
     "linux": {
-      "target": "AppImage"
+      "target": "AppImage",
+      "icon": "assets/images/cat1_stone.png"
     }
   }
+
 }
