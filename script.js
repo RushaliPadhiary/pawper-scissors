@@ -304,9 +304,12 @@
         $hud.classList.add('fade-out');
         $choices.classList.add('hidden');
         $overlay.classList.add('fade-out');
+        $arena.style.opacity = '0';
+        $arena.style.transition = 'opacity 0.8s ease';
 
         setTimeout(() => {
             $arena.style.opacity = '0';
+            $arena.style.transition = '';
             showWinDialog();
         }, 900);
     }
