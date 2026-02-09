@@ -21,15 +21,15 @@
     },
     "mac": {
       "category": "public.app-category.games",
-      "icon": "assets/images/cat1_stone.png"
+      "icon": "assets/images/Date_bg.png"
     },
     "win": {
       "target": "nsis",
-      "icon": "assets/images/cat1_stone.png"
+      "icon": "assets/images/Date_bg.png"
     },
     "linux": {
       "target": "AppImage",
-      "icon": "assets/images/cat1_stone.png"
+      "icon": "assets/images/Date_bg.png"
     }
   }
 
