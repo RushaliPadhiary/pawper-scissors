@@ -125,8 +125,16 @@
     }
 
     function handleMovie() {
-        window.location.href = 'https://hyperbeam.com';
+    // Force external opening for Electron
+    if (typeof require !== 'undefined' && require('electron')) {
+        // Running in Electron - open in default browser
+        const { shell } = require('electron');
+        shell.openExternal('https://hyperbeam.com');
+    } else {
+        // Running in browser - normal redirect
+        window.open('https://hyperbeam.com', '_blank');
     }
+}
 
     /* ---Round Intro--- */
     function startGame() {
