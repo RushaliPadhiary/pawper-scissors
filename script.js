@@ -306,13 +306,14 @@
         $overlay.classList.add('fade-out');
 
         setTimeout(() => {
-            $overlay.classList.add('hidden');
+            $arena.style.opacity = '0';
             showWinDialog();
         }, 900);
     }
 
     function showWinDialog() {
         $winDialog.classList.remove('hidden');
+        $winDialog.style.zIndex = '200';
     }
 
     /* ---Movie Picker--- */
