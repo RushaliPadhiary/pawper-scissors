@@ -280,25 +280,37 @@ html, body {
 .win-content {
     padding: 60px 30px 30px;
     gap: 16px;
+    position: relative; 
+    min-height: 580px; 
 }
 
 .win-header {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
-    max-width: 380px;
+    max-width: 450px;
+    position: absolute; 
+    top: 180px; 
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 .win-gif {
-    width: 90px;
+    width: 140px;
     height: auto;
-    flex-shrink: 0;
+    margin-top: 30px;
+    margin-left: -38px;
 }
 
 .win-text {
+    top: 10px;
     color: #3d3d5c;
-    font-size: 10px;
-    line-height: 2.1;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+#btn-claim .btn-label {
+    right: auto;
+    left: 160px;
 }
 
 /* ---Movie picker--- */
