@@ -132,6 +132,7 @@ html, body {
     height: 826px;
     max-height: calc(100vh - 40px);
     background: #F78DA7;
+    opacity: 0.45;
     border-radius: 18px;
     z-index: 0;
 }
