@@ -3,7 +3,7 @@
 
 <h3>Option 1: Download & Play (Easiest)</h3>
 <ol>
-  <li><strong>Download</strong> executable for your OS above ↑</li>
+  <li><strong>Download</strong> executable for your OS</li>
   <li><strong>Install/Run</strong> (no setup needed)</li>
   <li><strong>Play!</strong> 🎮</li>
 </ol>
