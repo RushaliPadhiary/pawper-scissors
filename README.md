@@ -41,7 +41,6 @@ npm start</code></pre>
 
 <h2>🖥️ Installation</h2>
 <ol>
-  <li><strong>Windows:</strong> Run <code>Pawper Scissors Setup.exe</code></li>
   <li><strong>Mac:</strong> Open <code>.dmg</code> → Drag to Applications</li>
   <li><strong>Linux:</strong> Run <code>.AppImage</code> (make executable first: <code>chmod +x *.AppImage</code>)</li>
 </ol>
