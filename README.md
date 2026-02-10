@@ -2,10 +2,7 @@
 
 <h2 align="center">🎮 Gameplay Preview</h2>
 <div align="center">
-  <video width="600" controls autoplay muted loop style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: 20px 0;">
-    <source src="assets/videos/Mini_Gameplay.mp4" type="video/mp4">
-    Your browser doesn't support video. <a href="https://github.com/RushaliPadhiary/pawper-scissors/releases">Download the game instead!</a>
-  </video>
+  https://github.com/user-attachments/assets/a508c097-3cd4-49b4-bd55-480a1d66b0b8
   <p><em>Watch the game of cute cat rock-paper-scissors with a surprise, in action!</em></p>
 </div>
 
