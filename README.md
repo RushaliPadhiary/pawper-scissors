@@ -1,4 +1,6 @@
 <h1 align="center">🐾 Pawper Scissors</h1>
+<video src="https://github.com/user-attachments/assets/5703fe1e-c440-43bb-a6cd-267f1fbb0532" controls="controls">
+</video>
 <h2>🚀 Quick Start</h2>
 
 <h3>Option 1: Download & Play (Easiest)</h3>
