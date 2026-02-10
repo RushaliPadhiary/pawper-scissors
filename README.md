@@ -3,7 +3,7 @@
 <h2 align="center">🎮 Gameplay Preview</h2>
 <div align="center">
   <video width="600" controls autoplay muted loop style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: 20px 0;">
-    <source src="assets/videos/gameplay.mp4" type="video/mp4">
+    <source src="assets/videos/Mini_Gameplay.mp4" type="video/mp4">
     Your browser doesn't support video. <a href="https://github.com/RushaliPadhiary/pawper-scissors/releases">Download the game instead!</a>
   </video>
   <p><em>Watch the game of cute cat rock-paper-scissors with a surprise, in action!</em></p>
@@ -19,17 +19,9 @@
 </ol>
 
 <h3>Option 2: Run from Source</h3>
-<pre><code>
-# 1. Clone the repository
-git clone https://github.com/RushaliPadhiary/pawper-scissors.git
-cd pawper-scissors
-
-# 2. Install dependencies
-
-npm install
-
-# 3. Run the game
-
+<pre><code>git clone https://github.com/RushaliPadhiary/pawper-scissors.git <br>
+cd pawper-scissors <br>
+npm install <br>
 npm start</code></pre>
 
 <h2>🎯 How to Play</h2>
