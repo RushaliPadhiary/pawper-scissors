@@ -2,7 +2,9 @@
 <video src="https://github.com/user-attachments/assets/5703fe1e-c440-43bb-a6cd-267f1fbb0532" controls="controls">
 </video>
 
-If you don't wanna download, you can also use this link: https://pawper-scissor.netlify.app/
+If you don't wanna/can't download, you can also use this link: https://pawper-scissor.netlify.app/
+Lemme know if you have any issues/suggestions
+
 <h2>🚀 Quick Start</h2>
 
 <h3>Option 1: Download & Play (Easiest)</h3>
