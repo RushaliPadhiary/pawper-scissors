@@ -2,7 +2,7 @@
 
 <h2 align="center">🎮 Gameplay Preview</h2>
 <div align="center">
-  https://github.com/user-attachments/assets/a508c097-3cd4-49b4-bd55-480a1d66b0b8
+  <iframe src="https://player.vimeo.com/video/1163692141?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
   <p><em>Watch the game of cute cat rock-paper-scissors with a surprise, in action!</em></p>
 </div>
 
