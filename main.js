@@ -17,7 +17,7 @@ function createWindow() {
   
   // Method 1: Intercept window.open()
   win.webContents.setWindowOpenHandler(({ url }) => {
-    if (url.includes('hyperbeam.com')) {
+    if (url.includes('letterboxd.com')) {
       shell.openExternal(url);
       return { action: 'deny' };
     }
@@ -26,7 +26,7 @@ function createWindow() {
   
   // Method 2: Intercept ALL navigation
   win.webContents.on('will-navigate', (event, url) => {
-    if (url.includes('hyperbeam.com')) {
+    if (url.includes('letterboxd.com')) {
       event.preventDefault();
       shell.openExternal(url);
     }
@@ -34,7 +34,7 @@ function createWindow() {
   
   // Method 3: Intercept new window creation (most comprehensive)
   win.webContents.on('new-window', (event, url) => {
-    if (url.includes('hyperbeam.com')) {
+    if (url.includes('letterboxd.com')) {
       event.preventDefault();
       shell.openExternal(url);
     }
