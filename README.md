@@ -3,6 +3,7 @@
 </video>
 
 If you don't wanna/can't download, you can also use this link: https://pawper-scissor.netlify.app/
+<br>
 Lemme know if you have any issues/suggestions
 
 <h2>🚀 Quick Start</h2>
@@ -27,7 +28,7 @@ npm start</code></pre>
   <li><strong>Play</strong> 7 rounds against the sassy cat</li>
   <li><strong>Win</strong> 4+ rounds to unlock a movie date! 🎬</li>
   <li><strong>Pick</strong> from 10 cute movies or choose one yourself!</li>
-  <li><strong>Watch</strong> together on Hyperbeam!</li>
+  <li><strong>Explore</strong> movie details, ratings, and where to stream on Letterboxd! 🎬</li>
 </ol>
 
 <h2>🎬 The Prize</h2>
@@ -36,11 +37,12 @@ npm start</code></pre>
   <li>🐟 <strong>Ponyo</strong></li>
   <li>🌸 <strong>Little Forest</strong></li>
   <li>☁️ <strong>Weathering With You</strong></li>
-  <li>and more!</li>
+  and more!
 </ul>
 
 <h2>🖥️ Installation</h2>
 <ol>
+  <li><strong>Windows:</strong> Double-click and run the Application</li>
   <li><strong>Mac:</strong> Open <code>.dmg</code> → Drag to Applications</li>
   <li><strong>Linux:</strong> Run <code>.AppImage</code> (make executable first: <code>chmod +x *.AppImage</code>)</li>
 </ol>
