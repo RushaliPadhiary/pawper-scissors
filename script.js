@@ -10,16 +10,16 @@
     const LOSES_TO = { stone: 'paper', paper: 'scissor', scissor: 'stone' };
 
     const MOVIES = [
-        'Ponyo',
-        'Little Forest',
-        '50 first dates',
-        'The vow',
-        'Me Before You',
-        'How to lose a guy in 10days',
-        'La La Land',
-        'Weathering with you',
-        'I wanna eat your pancreas',
-        "Lemme pick smthg else <3"
+        { title: 'Ponyo', link: 'https://letterboxd.com/film/ponyo/' },
+        { title: 'Little Forest', link: 'https://letterboxd.com/film/little-forest/'},
+        { title: '50 first dates', link: 'https://letterboxd.com/film/50-first-dates/'},
+        { title: 'The vow', link: 'https://letterboxd.com/film/the-vow/'},
+        { title: 'Me Before You', link: 'https://letterboxd.com/film/me-before-you/'},
+        { title: 'How to lose a guy in 10days', link: 'https://letterboxd.com/film/how-to-lose-a-guy-in-10-days/'},
+        { title: 'La La Land', link: 'https://letterboxd.com/film/la-la-land/'},
+        { title: 'Weathering with you', link: 'https://letterboxd.com/film/weathering-with-you/'},
+        { title: 'I wanna eat your pancreas', link: 'https://letterboxd.com/film/i-want-to-eat-your-pancreas/'},
+        { title: 'Lemme pick smthg else <3', link: 'https://letterboxd.com/films/'}
     ];
 
     /* ---assets--- */
@@ -125,14 +125,17 @@
     }
 
     function handleMovie() {
+
+    const link = MOVIES[movieIndex].link;
+
     // Force external opening for Electron
     if (typeof require !== 'undefined' && require('electron')) {
         // Running in Electron - open in default browser
         const { shell } = require('electron');
-        shell.openExternal('https://hyperbeam.com');
+        shell.openExternal(link);
     } else {
         // Running in browser - normal redirect
-        window.open('https://hyperbeam.com', '_blank');
+        window.open(link, '_blank');
     }
 }
 
@@ -338,11 +341,11 @@
     }
 
     function updateMovieUI() {
-    $movieLabel.textContent = MOVIES[movieIndex];
+    $movieLabel.textContent = MOVIES[movieIndex].title;
     $remaining.textContent = `Remaining picks: ${moviePicks}/${MOVIES.length}`;
     
     const btnLabel = $btnMovie.querySelector('.btn-label');
-    const currentMovie = MOVIES[movieIndex];
+    const currentMovie = MOVIES[movieIndex].title;
     
     btnLabel.textContent = currentMovie;
     
